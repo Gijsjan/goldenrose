@@ -3,6 +3,45 @@
 	var currentColl = null;
 	var currentDocs = null;
 
+	$(document).on('click', '.add.collection', function(ev) {
+		var collName = window.prompt("Enter collection name", "");
+		if ((collName !== null) && (collName !== "")) {
+
+			jqXHR = $.ajax({
+				type: 'post',
+				url: '/mongo/db/'+currentDB+'/add',
+				data: {'collName': collName}
+			});
+			jqXHR.done(function(collName) {
+				$('#colls').append($('<li />').html(currentDB+'.'+collName));
+				// console.log(collectionName);
+			});
+		}
+	});
+
+	$(document).on('click', '.add.doc', function(ev) {
+		var data = {"": ""};
+		editor.setValue(JSON.stringify(data, null, 4), -1);
+		$('#editorhead').removeClass('hidden');
+		$('#editordiv').removeClass('hidden');
+	});
+
+	$(document).on('click', '.save.doc', function(ev) {
+		var json = editor.getValue();
+		console.log(json);
+		jqXHR = $.ajax({
+			type: 'post',
+			url: '/mongo/db/'+currentDB+'/coll/'+currentColl+'/add',
+			data: {'json': json}
+		});
+		jqXHR.done(function(result) {
+			editor.setValue(JSON.stringify(result, null, 4), -1);
+			var index = currentDocs.push(result) - 1;
+			var name = (result.name) ? result.name : result._id
+			$('#docs').append($('<li data-index="'+index+'" />').html(name));
+		});
+	});
+
 	$(document).on('click', 'ul#dbs li', function(ev) {
 		$('#body [id]').addClass('hidden');
 		$('#heads [id]').addClass('hidden');
