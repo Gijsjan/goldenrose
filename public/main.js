@@ -6,9 +6,6 @@
 	$(document).on('click', 'ul#dbs li', function(ev) {
 		$('#body [id]').addClass('hidden');
 		$('#heads [id]').addClass('hidden');
-		// $('#collsdiv').addClass('hidden');
-		// $('#docsdiv').addClass('hidden');
-		// $('#editordiv').addClass('hidden');
 
 		$('ul#dbs li.active').removeClass('active');
 		$(ev.currentTarget).addClass('active');
@@ -56,7 +53,7 @@
 
 		jqXHR = $.ajax({
 			type: 'get',
-			url: '/db/db/'+db+'/coll/'+coll
+			url: '/mongo/db/'+db+'/coll/'+coll
 		});
 		jqXHR.done(function(docs) {
 			$docs.html('');
@@ -72,7 +69,7 @@
 
 		jqXHR = $.ajax({
 			type: 'get',
-			url: '/db/db/'+db+'/colls/'
+			url: '/mongo/db/'+db+'/colls/'
 		});
 		jqXHR.done(function(data) {
 			$colls.html('');
@@ -86,7 +83,7 @@
 	function getDBs() {
 		jqXHR = $.ajax({
 			type: 'get',
-			url: '/db/dbs'
+			url: '/mongo/dbs'
 		});
 		jqXHR.done(function(data) {
 			_.each(data.databases, function(db) {

@@ -5,6 +5,8 @@ app = express()
 
 app.use express.bodyParser()
 
+app.use express.static(__dirname + '/public')
+
 MongoClient = require('mongodb').MongoClient
 MongoServer = require('mongodb').Server
 mongoServer = new MongoServer 'localhost', 27017
@@ -17,7 +19,7 @@ _writeResponse = (response, res) ->
 	res.writeHead response.code, 'Content-Type': 'application/json; charset=UTF-8'
 	res.end JSON.stringify(response.data)
 
-app.get '/dbs', (req, res) ->
+app.get '/mongo/dbs', (req, res) ->
 	MongoClient.connect "mongodb://localhost:27017/users", (err, db) ->
 		adminDb = db.admin();
 
@@ -26,11 +28,9 @@ app.get '/dbs', (req, res) ->
 				code: 200
 				data: dbs
 
-			console.log dbs
-
 			_writeResponse data, res
 
-app.get '/db/:db/colls/', (req, res) ->
+app.get '/mongo/db/:db/colls/', (req, res) ->
 	MongoClient.connect "mongodb://localhost:27017/"+req.params.db, (err, db) ->
 		# db.collections (err, collections) ->
 		db.collectionNames (err, collections) ->
@@ -41,7 +41,7 @@ app.get '/db/:db/colls/', (req, res) ->
 
 			_writeResponse data, res
 
-app.get '/db/:db/coll/:coll', (req, res) ->
+app.get '/mongo/db/:db/coll/:coll', (req, res) ->
 	MongoClient.connect "mongodb://localhost:27017/"+req.params.db, (err, db) ->
 		db.collection(req.params.coll).find({}).toArray (err, docs) ->
 			data = 
