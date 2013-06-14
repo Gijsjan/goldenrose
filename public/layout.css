@@ -12,7 +12,7 @@
 }
 .row .cell {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .span1 .span1 {
   width: 100%;

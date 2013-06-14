@@ -1,0 +1,26 @@
+.row
+	font-size 0
+
+	*
+		vertical-align top
+
+	.center
+		text-align center
+
+	.right
+		text-align right
+
+	.cell
+		display inline-block
+		font-size 0.9rem
+
+rows(divisions)
+	for division in divisions
+		range = 1...division
+		.span{division}
+			for r in range
+				.span{r}
+					width floor((r/division)*100%)
+					
+
+rows(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
