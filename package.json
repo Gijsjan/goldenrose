@@ -1,0 +1,13 @@
+{
+	"name": "MongoViewer",
+	"description": "The simplest localhost-only MongoDB in-the-browser viewer",
+	"author": "Gijsjan Brouwer",
+	"dependencies": {
+		"underscore": "*",
+		"jquery": "*",
+		"express": "*",
+		"mongodb": "*",
+		"ace": "git://github.com/ajaxorg/ace-builds.git"
+	},
+	"engine": "node >= 0.10.0"
+}

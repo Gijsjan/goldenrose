@@ -1,0 +1,66 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia;
+}
+h1 {
+  color: #ffb90f;
+  text-shadow: #c9c6c6 2px 1px 4px;
+  font-size: 3rem;
+}
+h1 small {
+  font-size: 2rem;
+  text-shadow: none;
+  color: #666;
+  font-weight: normal;
+}
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+li.active {
+  background-color: #ffe39f;
+}
+#editordiv,
+#collsdiv,
+#docsdiv,
+#editorhead,
+#collshead,
+#docshead {
+  -webkit-transition: width 500ms;
+  -moz-transition: width 500ms;
+  overflow: hidden;
+}
+#editor {
+  width: 100%;
+  height: 200px;
+}
+#body div.cell.hidden,
+#heads div.cell.hidden {
+  width: 0%;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+}
+#body .cell,
+#heads .cell {
+  margin-right: 2%;
+  padding: 1%;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul li {
+  padding-left: 6px;
+  cursor: pointer;
+}
+#body .cell {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: #ffb90f 2px 2px 10px;
+}
+#heads .cell {
+  font-weight: bold;
+}

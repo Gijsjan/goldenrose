@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>MongoDB Viewer</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="layout.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="row span1">
+			<div class="cell span1 center">
+				<h1>Golden Rose <small>MongoDB Viewer</small></h1>
+			</div>
+		</div>
+		<div id="heads" class="row span12">
+			<div class="cell span1">
+				<span>DBs</span>
+			</div>
+			<div id="collshead" class="cell span2 hidden">
+				<span>Collections</span>
+			</div>
+			<div id="docshead" class="cell span2 hidden">
+				<span>Docs</span>
+			</div>
+			<div id="editorhead" class="cell span5 hidden">
+				<span>JSON</span>
+			</div>
+		</div>
+		<div id="body" class="row span12">
+			<div class="cell span1">
+				<ul id="dbs"></ul>
+			</div>
+			<div id="collsdiv" class="cell span2 hidden">
+				<ul id="colls"></ul>
+			</div>
+			<div id="docsdiv" class="cell span2 hidden">
+				<ul id="docs"></ul>
+			</div>
+			<div id="editordiv" class="cell span5 hidden">
+				<div id="editor"></div>
+			</div>
+		</div>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+	<script src="main.js"></script>
+	<script src="/lib/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var editor = ace.edit("editor");
+		editor.setTheme("ace/theme/textmate");
+		editor.getSession().setMode("ace/mode/json");
+	</script>
+</body>
+</html>
