@@ -68,3 +68,15 @@ ul li.active {
 #heads .cell {
   font-weight: bold;
 }
+span.add,
+span.save {
+  border-radius: 2px;
+  padding: 0px 2px;
+}
+span.add:hover,
+span.save:hover {
+  cursor: pointer;
+  background-color: #ffb90f;
+  border-radius: 2px;
+  padding: 0px 2px;
+}
