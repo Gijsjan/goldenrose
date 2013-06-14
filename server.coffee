@@ -51,5 +51,5 @@ app.get '/mongo/db/:db/coll/:coll', (req, res) ->
 			_writeResponse data, res
 				
 
-app.listen 3000
-console.log 'Node server running on :3000'
+app.listen 3000, 'localhost'
+console.log 'Node server running on http://localhost:3000'
