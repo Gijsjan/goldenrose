@@ -12,13 +12,13 @@
 - cd goldenrose
 - npm install
 - bower install
-- coffee server.coffee
-- see the Golden Rose bloom at http://localhost:3000
+- npm start (=> http://localhost:3000) 
+- npm test (=> http://localhost:8000/.test/index.html) 
 
 ## Roadmap
 
 - Add Mongo login
-- Save doc
+- Edit doc, coll, db
 - Pagination
 - Feedback loop (error login, db not found, etc)
 - Convert HTML to Jade
