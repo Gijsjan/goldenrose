@@ -1,0 +1,33 @@
+#wrapper
+	.row.span1
+		.cell.span1.center
+			h1 Golden Rose 
+				small MongoDB Viewer
+				
+	#heads.row.span12
+		#dbshead.cell.span1 
+			span DBs
+	
+		#collshead.cell.span2.hidden
+			span Collections
+			span.add.collection +
+	
+		#docshead.cell.span2.hidden
+			span Docs
+			span.add.doc +
+	
+		#editorhead.cell.span5.hidden
+			span JSON
+			span.save.doc v
+
+	#body.row.span12
+		#dbsdiv.cell.span1
+	
+		#collsdiv.cell.span2.hidden
+			ul#colls
+	
+		#docsdiv.cell.span2.hidden
+			ul#docs
+	
+		#editordiv.cell.span5.hidden
+			#editor

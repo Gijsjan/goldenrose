@@ -1,10 +1,18 @@
 {
-  "name": "Golden Rose MongoDB Viewer",
-  "description": "The simplest localhost-only MongoDB in-the-browser viewer",
-  "author": "Gijsjan Brouwer",
-  "dependencies": {
-    "underscore": "*",
-    "jquery": "*",
-    "ace": "git://github.com/ajaxorg/ace-builds.git"
-  }
-}  
+	"name": "goldenrose",
+	"version": "0.0.0",
+	"dependencies": {
+		"requirejs": "*",
+		"requirejs-text": "*",
+		"requirejs-domready": "*",
+		"jquery": "*",
+		"underscore-amd": "*",
+		"backbone-amd": "*",
+		"ace": "https://github.com/ajaxorg/ace.git"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"chai": "*"
+	}
+}
+

@@ -5,7 +5,7 @@ app = express()
 
 app.use express.bodyParser()
 
-app.use express.static(__dirname + '/public')
+app.use express.static(__dirname + '/dev')
 
 # MongoClient = require('mongodb').MongoClient
 # MongoServer = require('mongodb').Server
@@ -26,15 +26,15 @@ _writeResponse = (response, res) ->
 	res.writeHead response.code, 'Content-Type': 'application/json; charset=UTF-8'
 	res.end JSON.stringify(response.data)
 
-app.post '/mongo/db/:db/add', (req, res) ->
-	_mongo req.params.db, (err, db) ->
-		db.createCollection req.body.collName, {}, (err, collection) ->
-			# TODO: if (err)
-			data =
-				code: 200
-				data: req.body.collName
+# app.post '/mongo/db/:db/add', (req, res) ->
+# 	_mongo req.params.db, (err, db) ->
+# 		db.createCollection req.body.collName, {}, (err, collection) ->
+# 			# TODO: if (err)
+# 			data =
+# 				code: 200
+# 				data: req.body.collName
 
-			_writeResponse data, res
+# 			_writeResponse data, res
 
 app.post '/mongo/db/:db/coll/:coll/add', (req, res) ->
 	json = JSON.parse(req.body.json)
@@ -60,13 +60,25 @@ app.get '/mongo/dbs', (req, res) ->
 
 			db.close()
 
-app.get '/mongo/db/:db/colls/', (req, res) ->
+app.get '/mongo/db/:db/colls', (req, res) ->
 	_mongo req.params.db, (err, db) ->
 		db.collectionNames (err, collections) ->
+			collections = _.map collections, (coll) -> name: coll.name.substr(coll.name.indexOf('.') + 1)
+
 			data = 
 				code: 200
 				data: collections
-				# data: _.pluck(collections, 'collectionName')
+
+			_writeResponse data, res
+
+app.post '/mongo/db/:db/colls', (req, res) ->
+	_mongo req.params.db, (err, db) ->
+		console.log req.body
+		db.createCollection req.body.name, {}, (err, collection) ->
+			# TODO: if (err)
+			data =
+				code: 200
+				data: req.body.name
 
 			_writeResponse data, res
 
