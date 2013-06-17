@@ -21,3 +21,4 @@
 - Edit doc, coll, db
 - Pagination
 - Feedback loop (error login, db not found, etc)
+- Breadcrumbs
