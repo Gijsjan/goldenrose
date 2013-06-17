@@ -36,10 +36,9 @@ _writeResponse = (response, res) ->
 
 # 			_writeResponse data, res
 
-app.post '/mongo/db/:db/coll/:coll/add', (req, res) ->
-	json = JSON.parse(req.body.json)
+app.post '/mongo/db/:db/coll/:coll', (req, res) ->
 	_mongo req.params.db, (err, db) ->
-		db.collection(req.params.coll).insert json, (err, result) ->
+		db.collection(req.params.coll).insert req.body, (err, result) ->
 			# TODO: if (err)
 			data =
 				code: 200
@@ -63,7 +62,11 @@ app.get '/mongo/dbs', (req, res) ->
 app.get '/mongo/db/:db/colls', (req, res) ->
 	_mongo req.params.db, (err, db) ->
 		db.collectionNames (err, collections) ->
-			collections = _.map collections, (coll) -> name: coll.name.substr(coll.name.indexOf('.') + 1)
+			collections = _.map collections, (coll) -> 
+				name = coll.name.substr(coll.name.indexOf('.') + 1)
+
+				name: name
+				id: name
 
 			data = 
 				code: 200
@@ -78,7 +81,9 @@ app.post '/mongo/db/:db/colls', (req, res) ->
 			# TODO: if (err)
 			data =
 				code: 200
-				data: req.body.name
+				data: 
+					name: req.body.name
+					id: req.body.name
 
 			_writeResponse data, res
 

@@ -38,6 +38,7 @@
         this.collection = new Collections.Documents();
         return this.collection.fetch({
           success: function() {
+            _this.collection.on('add', _this.render, _this);
             return _this.render();
           }
         });
@@ -45,6 +46,7 @@
 
       DocumentList.prototype.render = function() {
         var _this = this;
+        this.$el.html('');
         this.collection.each(function(doc) {
           var name;
           name = doc.get('name') != null ? doc.get('name') : doc.id;

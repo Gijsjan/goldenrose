@@ -27,21 +27,39 @@
       }
 
       vEdit.prototype.events = {
-        'click .add.collection': 'addCollection'
+        'click .add.collection': 'addCollection',
+        'click .add.document': 'addDocument',
+        'click .save.document': 'saveDocument'
       };
 
       vEdit.prototype.addCollection = function() {
-        var collName, model;
+        var collName;
         collName = window.prompt("Enter collection name", "");
         if (collName != null) {
-          model = new Models.Collection({
+          return this.collList.collection.create({
             name: collName
-          });
-          model.save();
-          return this.collList.collection.add(model, {
-            parse: true
+          }, {
+            wait: true
           });
         }
+      };
+
+      vEdit.prototype.addDocument = function() {
+        var data;
+        data = {
+          "": ""
+        };
+        this.editor.setValue(JSON.stringify(data, null, 4), -1);
+        $('#editorhead').removeClass('hidden');
+        return $('#editordiv').removeClass('hidden');
+      };
+
+      vEdit.prototype.saveDocument = function() {
+        var data;
+        data = JSON.parse(this.editor.getValue());
+        return this.docList.collection.create(data, {
+          wait: true
+        });
       };
 
       vEdit.prototype.initialize = function() {
@@ -65,6 +83,25 @@
       };
 
       vEdit.prototype.showCollections = function() {
+        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
+          _this = this;
+        breadcrumbOffset = this.$('#breadcrumb .database').offset();
+        liOffset = this.$('#' + config.current.database.id).offset();
+        this.$('#' + config.current.database.id).css({
+          'left': '0px'
+        });
+        this.$('#' + config.current.database.id).css({
+          'position': 'relative'
+        });
+        deltaTop = breadcrumbOffset.top - liOffset.top;
+        deltaLeft = breadcrumbOffset.left - liOffset.left;
+        this.$('#' + config.current.database.id).animate({
+          left: deltaLeft,
+          top: deltaTop
+        }, 500, function() {
+          _this.$('#breadcrumb .database').html(config.current.database.id);
+          return _this.dbList.remove();
+        });
         this.$('#dbsdiv ~ div').addClass('hidden');
         this.$('#dbshead ~ div').addClass('hidden');
         this.collList = new Views.CollectionList();

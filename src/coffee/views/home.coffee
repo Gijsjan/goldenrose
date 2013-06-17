@@ -21,14 +21,30 @@ define (require) ->
 
 		events:
 			'click .add.collection': 'addCollection'
+			'click .add.document': 'addDocument'
+			'click .save.document': 'saveDocument'
 
 		addCollection: ->
 			collName = window.prompt "Enter collection name", ""
 			if collName?
-				model = new Models.Collection 
+				@collList.collection.create
 					name: collName
-				model.save()
-				@collList.collection.add model, parse:true
+				,
+					wait: true
+
+		addDocument: ->
+			data =
+				"": ""
+
+			@editor.setValue JSON.stringify(data, null, 4), -1
+
+			$('#editorhead').removeClass 'hidden'
+			$('#editordiv').removeClass 'hidden'
+
+		saveDocument: ->
+			data = JSON.parse @editor.getValue()
+
+			@docList.collection.create data, wait: true
 
 		initialize: ->
 			super
@@ -53,6 +69,25 @@ define (require) ->
 			@
 
 		showCollections: ->
+			breadcrumbOffset = @$('#breadcrumb .database').offset()
+			liOffset = @$('#'+config.current.database.id).offset()
+
+			@$('#'+config.current.database.id).css 'left': '0px'
+			@$('#'+config.current.database.id).css 'position': 'relative'
+
+			deltaTop = breadcrumbOffset.top - liOffset.top
+			deltaLeft = breadcrumbOffset.left - liOffset.left
+			
+			@$('#'+config.current.database.id).animate
+				left: deltaLeft
+				top: deltaTop
+			,
+				500
+			,
+				=>
+					@$('#breadcrumb .database').html config.current.database.id
+					@dbList.remove()
+
 			@$('#dbsdiv ~ div').addClass('hidden')
 			@$('#dbshead ~ div').addClass('hidden')
 

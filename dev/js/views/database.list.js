@@ -38,6 +38,7 @@
         this.collection = new Collections.Databases();
         return this.collection.fetch({
           success: function() {
+            _this.collection.on('add', _this.render, _this);
             return _this.render();
           }
         });
@@ -45,6 +46,7 @@
 
       DatabaseList.prototype.render = function() {
         var _this = this;
+        this.$el.html('');
         this.collection.each(function(db) {
           return _this.$el.append($("<li id='" + db.id + "' />").html(db.id));
         });

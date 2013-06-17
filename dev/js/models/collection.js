@@ -18,12 +18,6 @@
         return '/mongo/db/' + config.current.database.id + '/colls';
       };
 
-      Collection.prototype.parse = function(attrs) {
-        console.log('parsing');
-        attrs.id = attrs.name;
-        return attrs;
-      };
-
       return Collection;
 
     })(BaseModel);

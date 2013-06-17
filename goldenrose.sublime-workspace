@@ -1,0 +1,2193 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"brea",
+				"breadcrumbOffset"
+			],
+			[
+				"curre",
+				"currentUser"
+			],
+			[
+				"curren",
+				"currentProject"
+			],
+			[
+				"session",
+				"sessionStorage"
+			],
+			[
+				"horiz",
+				"horizontal_li_padding"
+			],
+			[
+				"mocha",
+				"mocha-phantomjs"
+			],
+			[
+				"cancel",
+				"cancelAndSubmit"
+			],
+			[
+				"get",
+				"getThemeTitle"
+			],
+			[
+				"current",
+				"currentUser"
+			],
+			[
+				"render",
+				"renderAnnotations"
+			],
+			[
+				"pers",
+				"persistentId"
+			],
+			[
+				"save",
+				"saveAnnotation"
+			],
+			[
+				"first",
+				"firstPageId"
+			],
+			[
+				"renderFi",
+				"renderFirstPage"
+			],
+			[
+				"clone",
+				"clonedBody"
+			],
+			[
+				"clon",
+				"clonedBody"
+			],
+			[
+				"clo",
+				"clonedBody"
+			],
+			[
+				"jq",
+				"jqajax	jQuery.ajax"
+			],
+			[
+				"bv",
+				"bv	Backbone View"
+			],
+			[
+				"biog",
+				"biographies"
+			],
+			[
+				"inde",
+				"indexTermCount"
+			],
+			[
+				"view",
+				"viewmanager"
+			],
+			[
+				"activ",
+				"activeModelIndex"
+			],
+			[
+				"JSON",
+				"JSONManager"
+			],
+			[
+				"View",
+				"ViewManager"
+			],
+			[
+				"fin",
+				"findAndHighlight"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"background",
+				"backgroundImageUrl"
+			],
+			[
+				"segm",
+				"segmentID"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"meta2",
+				"meta2NoteClicked"
+			],
+			[
+				"check",
+				"checkedManuscripts"
+			],
+			[
+				"error",
+				"errorThrown"
+			],
+			[
+				"form",
+				"formSubmit"
+			],
+			[
+				"high",
+				"highlight"
+			],
+			[
+				"facs",
+				"facsimile"
+			],
+			[
+				"anchor",
+				"anchorPositions"
+			],
+			[
+				"manu",
+				"manualScrolled"
+			],
+			[
+				"autoSc",
+				"autoScrolling"
+			],
+			[
+				"old",
+				"oldPageId"
+			],
+			[
+				"fac",
+				"facsimile"
+			],
+			[
+				"active",
+				"activateTab"
+			],
+			[
+				"acti",
+				"activateTab"
+			],
+			[
+				"curr",
+				"currentSize"
+			],
+			[
+				"move",
+				"moveGeneralNotes"
+			],
+			[
+				"firt",
+				"firstPage"
+			],
+			[
+				"manus",
+				"manuscriptMap"
+			],
+			[
+				"manuscrip",
+				"manuscriptPart"
+			],
+			[
+				"page",
+				"pageIndex"
+			],
+			[
+				"para",
+				"paragraphIndex"
+			],
+			[
+				"cl",
+				"cl	console.log"
+			],
+			[
+				"click",
+				"clickcount"
+			],
+			[
+				"popu",
+				"popupClicked"
+			],
+			[
+				"clik",
+				"clickcount"
+			],
+			[
+				"append",
+				"appendChild"
+			],
+			[
+				"scrol",
+				"scroll_top"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"model",
+				"modelmanager"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"physical",
+				"physicaldetail"
+			],
+			[
+				"attr",
+				"changedAttributes"
+			],
+			[
+				"appen",
+				"appendChild"
+			],
+			[
+				"list-",
+				"list-style-image"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"font-",
+				"font-weight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/coffee/views/home.coffee",
+			"settings":
+			{
+				"buffer_size": 2830,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/coffee/models/collection.coffee",
+			"settings":
+			{
+				"buffer_size": 180,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.coffee",
+			"settings":
+			{
+				"buffer_size": 2434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/coffee/views/collection.list.coffee",
+			"settings":
+			{
+				"buffer_size": 759,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/jade/home.jade",
+			"settings":
+			{
+				"buffer_size": 627,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/coffee/views/document.list.coffee",
+			"settings":
+			{
+				"buffer_size": 813,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/coffee/views/database.list.coffee",
+			"settings":
+			{
+				"buffer_size": 744,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Stylus/Stylus.sublime-build",
+	"command_palette":
+	{
+		"height": 103.0,
+		"selected_items":
+		[
+			[
+				"commit",
+				"SVN: Commit…"
+			],
+			[
+				"svn sta",
+				"SVN: Status"
+			],
+			[
+				"status",
+				"SVN: Status"
+			],
+			[
+				"svn commit",
+				"SVN: Commit…"
+			],
+			[
+				"svn status",
+				"SVN: Status"
+			],
+			[
+				"svn statu",
+				"SVN: Status"
+			],
+			[
+				"svn comm",
+				"SVN: Commit…"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"update",
+				"SVN: Update"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"svn update",
+				"SVN: Update"
+			],
+			[
+				"svn",
+				"SVN: Update"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"ommit",
+				"SVN: Commit…"
+			],
+			[
+				"pretyy",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"prettr",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"commi",
+				"SVN: Commit…"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"pre",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"pret",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"JSON",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"PRETT",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"json",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/gijs/Projects/goldenrose/goldenrose.sublime-project",
+		"/home/gijs/Projects/goldenrose/goldenrose.coffee",
+		"/home/gijs/Projects/AF/www/server.coffee",
+		"/home/gijs/Projects/stylus/mongo.html",
+		"/home/gijs/Projects/stylus/index.html",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/models/currentUser.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/app.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/helpers/fns.coffee",
+		"/home/gijs/Projects/helpers/test/fns.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/login.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/index.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/media.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/header.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/app.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/ui/nav.user.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/main.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/menu.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/views/ui/nav.user.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/views/login.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/layout.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/models/currentUser.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/z.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/css/main.css",
+		"/tmp/sublime-svn-1371053308/SVN",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/main.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/managers/async.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/managers/cookie.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/.test/head.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/routers/main.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/views/home.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/js/models/currentUser.js",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/Gruntfile.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/config.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/.test/main.js",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/.test/template.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/index.html",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/collections/projects.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/collections/view.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/managers/cookie.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/managers/view.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/routers/main.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/views/home.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/views/ui/nav.project.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/views/ui/nav.user.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/collections/projects.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/import/variables.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/variables.styl",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/collections/view.coffee",
+		"/home/gijs/Projects/responsive/index.html",
+		"/tmp/sublime-svn-1370937081/SVN",
+		"/tmp/sublime-svn-1370937023/SVN",
+		"/tmp/sublime-svn-1370936857/SVN",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/managers/view.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/ui/nav.project.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/views/ui/nav.project.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/js/managers/view.js",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/pubsub.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/pubsub.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/main.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/package.json",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/views/base.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/views/base.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/p.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/test.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/.test/index.html",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/testing/test.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/lalaa.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/collections/base.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/collections/base.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/test/body.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/coffee/models/base.coffee",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/na/nana.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/blo.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bliet.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/ich.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bra.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bli/blo.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/toet/toet.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/deze.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/ach.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/och.jade",
+		"/home/gijs/.config/sublime-text-2/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/home/gijs/.config/sublime-text-2/Packages/Stylus/Stylus.sublime-build",
+		"/home/gijs/Apps/stylus_compile_recursive",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/toet.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/na.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/oech.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/we.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/derde.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/een.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/twee.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/prob.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/haha.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/p.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/jade/bla/bla.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/html/bla.html",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/html/bla/een.jade",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/dev/html/*.html",
+		"/home/gijs/.config/sublime-text-2/Packages/LiveReload/LiveReload.sublime-settings",
+		"/home/gijs/Projects/eLaborate/elaborate_frontend/src/stylus/test.styl",
+		"/home/gijs/.config/sublime-text-2/Packages/User/LiveReload.sublime-settings",
+		"/home/gijs/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/gijs/.config/sublime-text-2/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/home/gijs/Projects/eLaborate/elaborate.sublime-project",
+		"/home/gijs/Projects/AF/www/dev/json/A1_070.json",
+		"/home/gijs/Projects/helpers/Gruntfile.coffee",
+		"/home/gijs/Projects/helpers/Gruntfile.js",
+		"/home/gijs/Projects/helpers/test/Gruntfile.js",
+		"/tmp/sublime-svn-1370417845/SVN",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/manuscript.part/list.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/manuscript.part/full.meta2.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/models/manuscript.part.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/search.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/ui/menu.js",
+		"/home/gijs/Projects/AF/www/dev/json/A1_038.json",
+		"/home/gijs/Projects/AF/www/dev/js/new/fns.js",
+		"/home/gijs/Projects/AF/www/dev/json/A1_009.json",
+		"/home/gijs/Projects/AF/www/dev/json/A1_027.json",
+		"/tmp/sublime-svn-1369929413/SVN",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/manuscript.part/full.article.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/ui/menu.login.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/collections/manuscript.part.pages.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/manuscript.part/full.nav.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/models/note.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/biographies.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/models/biography.js",
+		"/home/gijs/Projects/AF/www/dev/js/new/views/ui/modal.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 88.0,
+		"where_history":
+		[
+			"",
+			"/home/gijs/Projects/AF/www/dev/js/new",
+			"/home/gijs/Projects/AF/www/dev/js/new/views",
+			"/home/gijs/Projects/AF/www/dev/js",
+			"/home/gijs/Projects/AF/www/dev/json",
+			"/home/gijs/Projects/AF/www/dev/js/new",
+			"/home/gijs/Projects/AF/www/js",
+			"/home/gijs/Projects/AF/www/json",
+			"/home/gijs/Projects/AF/www/js",
+			"",
+			"Parser.on('note:new')",
+			"/home/gijs/Projects/AF/www/css",
+			"/home/gijs/Projects/AF/www/css/,*.styl",
+			"/home/gijs/Projects/AF/www/css/*.styl",
+			"/home/gijs/Projects/AF/www/css",
+			"/home/gijs/Projects/AF/www/js",
+			"/home/gijs/Projects/AF/www/css",
+			"/home/gijs/Projects/AF/www/js",
+			"",
+			"/home/gijs/Projects/AF/www/css",
+			"",
+			"/home/gijs/Projects/AF/www/js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"right",
+			"i",
+			"{",
+			"function",
+			"*",
+			" */",
+			"/**",
+			"* ",
+			".log",
+			"publish",
+			"authori",
+			"login",
+			"authorized",
+			"elaborate_user",
+			"session",
+			"fetchToken",
+			"@async",
+			"async",
+			"cookie",
+			".authorize",
+			"authorize",
+			"	describe \"currentUser\", ->\n		currentUser = require 'models/currentUser'\n\n		before ->\n			un = $('<input type=\"text\" id=\"username\" />').val 'gijsjan_brouwer'\n			pw = $('<input type=\"password\" id=\"password\" />').val 'qe9hEtra'\n\n			$('#sandbox').append(un)\n			$('#sandbox').append(pw)\n\n		describe \"authorize\", ->\n			it \"should call authorized callback on correct credentials\", (done) ->\n				currentUser.authorize\n					authorized: -> done()\n					unauthorized: ->\n\n			it \"should call unauthorized callback on incorrect credentials\", (done) ->\n				$('#password').val 'wrongpass' # Set wrong password\n				currentUser.authorize\n					authorized: ->\n					unauthorized: -> done()\n\n			after ->\n				$('#password').val 'qe9hEtra' # Restore correct password\n\n		describe \"fetchToken\", ->\n			data = undefined\n\n			before (done) ->\n				currentUser.fetchToken().done (data) ->\n					data = data\n					done()\n\n			it \"should fetch a token\", ->\n				data.token.should.exist\n\n			it \"should fetch user data\", ->\n				data.user.should.exist\n\n		describe \"fetchProjects\", ->\n			data = undefined\n\n			before (done) ->\n				currentUser.fetchProjects().done (data) ->\n					data = data\n					done()\n\n			it \"should fetch projects\", ->\n				data.should.exist",
+			"/dev",
+			"@set",
+			")\n",
+			"xhr",
+			"XHR",
+			"xhr",
+			"addUrlToiFrames",
+			"middle",
+			"this.",
+			"amdefine",
+			"_",
+			"_.",
+			"pubsubObj",
+			"\"pb\"",
+			"parser",
+			"Parser",
+			"intervalWithReset",
+			"contains",
+			"cookie",
+			":",
+			"this.getInnerHTML();",
+			" \n						open_del",
+			"\n						",
+			"this.getInnerHTML(); \n",
+			"this.getInnerHTML(); ",
+			"(); ",
+			"getInnerHTML();",
+			"getInnerHTML()",
+			"(); ",
+			"getInnerHTML();",
+			"getInnerHTML()",
+			"(); ",
+			"this.getInnerHTML();",
+			"this.getInnerHTML()",
+			"opener",
+			"pb",
+			"firstPageId",
+			"fpId",
+			"parseJSON",
+			"Parser",
+			"firstPageId",
+			"fpID",
+			"Parser",
+			"key",
+			"seq",
+			"innerafter",
+			"innerbefore",
+			"innnerBefore",
+			"after",
+			"before",
+			" || ",
+			"open_del",
+			" || ",
+			"||",
+			"open_del",
+			" || ",
+			"||",
+			"is dol op",
+			"head",
+			"resp",
+			"type",
+			"div",
+			"*",
+			"ul.menu",
+			"state",
+			"place",
+			"seq",
+			"remove",
+			"var ",
+			"'",
+			"\n				console.log(clas)\n				console.log(type)\n				console.log(resp)",
+			"open_head",
+			"clas",
+			"head",
+			"dataset",
+			"setPosit",
+			"dataset",
+			"}\n",
+			".dataset",
+			"dataset",
+			"e.",
+			"e",
+			".dataset",
+			"ds",
+			"countKeys",
+			"countKyes",
+			"hover",
+			"http",
+			"parent_keys",
+			"theme",
+			"nbsp",
+			"term sinn",
+			"tag",
+			"#02b1f",
+			"tag",
+			"variable",
+			"function",
+			"ret",
+			"returm",
+			"returt",
+			"retur",
+			"return",
+			"if",
+			"loop",
+			"function",
+			"string "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"var BaseView = require('views/base');",
+			"BaseView"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/coffee/views/home.coffee",
+					"settings":
+					{
+						"buffer_size": 2830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2176,
+								2176
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/coffee/models/collection.coffee",
+					"settings":
+					{
+						"buffer_size": 180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server.coffee",
+					"settings":
+					{
+						"buffer_size": 2434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1162,
+								1162
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 357.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/coffee/views/collection.list.coffee",
+					"settings":
+					{
+						"buffer_size": 759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/jade/home.jade",
+					"settings":
+					{
+						"buffer_size": 627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/coffee/views/document.list.coffee",
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								659,
+								659
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/coffee/views/database.list.coffee",
+					"settings":
+					{
+						"buffer_size": 744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								651,
+								651
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 181.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"routermain",
+				"src/coffee/routers/main.coffee"
+			],
+			[
+				"curren",
+				"src/coffee/models/currentUser.coffee"
+			],
+			[
+				"devcurrent",
+				"dev/js/models/currentUser.js"
+			],
+			[
+				"devcurren",
+				"dev/js/models/currentUser.js"
+			],
+			[
+				"testcurrent",
+				"test/models/currentUser.coffee"
+			],
+			[
+				"jsona70",
+				"JSON/A1_070.json"
+			],
+			[
+				"viewsmanuscript",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"manuscript",
+				"JS/views/manuscript.part/list.js"
+			],
+			[
+				"modelman",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"jsona138",
+				"JSON/A1_038.json"
+			],
+			[
+				"menu",
+				"JS/views/ui/menu.js"
+			],
+			[
+				"search",
+				"JS/views/search.js"
+			],
+			[
+				"meta",
+				"JS/views/manuscript.part/full.meta2.js"
+			],
+			[
+				"json009",
+				"JSON/A1_009.json"
+			],
+			[
+				"json27",
+				"JSON/A1_027.json"
+			],
+			[
+				"json",
+				"JS/jsonparser.js"
+			],
+			[
+				"note",
+				"JS/models/note.js"
+			],
+			[
+				"modelsmanu",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"modal",
+				"JS/views/ui/modal.js"
+			],
+			[
+				"router",
+				"JS/routers/main.js"
+			],
+			[
+				"main",
+				"JS/main.js"
+			],
+			[
+				"article",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"mz21",
+				"JSON/MZ_021.json"
+			],
+			[
+				"viewsbase",
+				"JS/views/base.js"
+			],
+			[
+				"collectionsview",
+				"JS/collections/view.js"
+			],
+			[
+				"managerview",
+				"JS/managers/view.js"
+			],
+			[
+				"view",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"jsonpar",
+				"JS/jsonparser.js"
+			],
+			[
+				"jsonmz21",
+				"JSON/MZ_021.json"
+			],
+			[
+				"biogra",
+				"JS/views/biographies.js"
+			],
+			[
+				"model",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"login",
+				"JS/views/ui/menu.login.js"
+			],
+			[
+				"viewsmanu",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"modelsmanuscript",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"fullartic",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"modal.js",
+				"JS/views/ui/modal.js"
+			],
+			[
+				"menulogin",
+				"JS/views/ui/menu.login.js"
+			],
+			[
+				"fns",
+				"JS/fns.js"
+			],
+			[
+				"manuscript.part",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"jsonb26",
+				"JSON/B_026.json"
+			],
+			[
+				"fullartice",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"meta2",
+				"JS/views/manuscript.part/full.meta2.js"
+			],
+			[
+				"viewslist",
+				"JS/views/manuscript.part/list.js"
+			],
+			[
+				"config",
+				"JS/config.js"
+			],
+			[
+				"fullarticle",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"full.articl",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"pub",
+				"JS/pubsub.js"
+			],
+			[
+				"nav",
+				"JS/views/manuscript.part/full.nav.js"
+			],
+			[
+				"json041",
+				"JSON/B_041.json"
+			],
+			[
+				"glossary",
+				"JS/views/glossary.js"
+			],
+			[
+				"manjson",
+				"JS/managers/json.js"
+			],
+			[
+				"managersjson",
+				"JS/managers/json.js"
+			],
+			[
+				"viewsbiblio",
+				"JS/views/bibliography.js"
+			],
+			[
+				"biograp",
+				"JS/collections/biography.js"
+			],
+			[
+				"full.js",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"manu",
+				"JS/views/manuscript.part/full.nav.js"
+			],
+			[
+				"mz004",
+				"JSON/MZ_004.json"
+			],
+			[
+				"mz16",
+				"JSON/MZ_016.json"
+			],
+			[
+				"json011",
+				"JSON/MZ_011.json"
+			],
+			[
+				"jsonmz010",
+				"JSON/MZ_010.json"
+			],
+			[
+				"viewsmanuscriptpart",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"jquery",
+				"JS/jquery.mixin.js"
+			],
+			[
+				"jsona118",
+				"JSON/A1_018.json"
+			],
+			[
+				"full",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"full.article",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"meta1",
+				"JS/views/manuscript.part/full.meta1.js"
+			],
+			[
+				"jsonmz005",
+				"JSON/MZ_005.json"
+			],
+			[
+				"mz003",
+				"JSON/MZ_003.json"
+			],
+			[
+				"jsonmz",
+				"JSON/MZ_002.json"
+			],
+			[
+				"proces",
+				"JS/views/process.js"
+			],
+			[
+				"jsona1007",
+				"JSON/A1_007.json"
+			],
+			[
+				"modelmanus",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"full.artic",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"viewsmanuscript.part",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"jsona120",
+				"JSON/A1_020.json"
+			],
+			[
+				"process",
+				"JS/views/process.js"
+			],
+			[
+				"index",
+				"JS/views/index/list.js"
+			],
+			[
+				"biograph",
+				"JS/views/bibliography.js"
+			],
+			[
+				"menu.js",
+				"JS/views/ui/menu.js"
+			],
+			[
+				"jsonb27",
+				"JSON/B_027.json"
+			],
+			[
+				"jsonvg10",
+				"JSON/VG_010.json"
+			],
+			[
+				"modelsmanus",
+				"JS/models/manuscript.part.js"
+			],
+			[
+				"glos",
+				"JS/views/glossary.js"
+			],
+			[
+				"manuscrippart",
+				"JS/views/manuscript.part/full.meta1.js"
+			],
+			[
+				"jsona1001",
+				"JSON/A1_001.json"
+			],
+			[
+				"biblio",
+				"JS/views/bibliography.js"
+			],
+			[
+				"manuscriptpart",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"rout",
+				"JS/routers/main.js"
+			],
+			[
+				"bio",
+				"JS/views/biographies.js"
+			],
+			[
+				"jsona109",
+				"JSON/A1_009.json"
+			],
+			[
+				"parse",
+				"JS/jsonparser.js"
+			],
+			[
+				"full.arti",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"jsonp",
+				"JS/jsonparser.js"
+			],
+			[
+				"a120",
+				"JSON/A1_020.json"
+			],
+			[
+				"jsona119",
+				"JSON/A1_019.json"
+			],
+			[
+				"viewsprocess",
+				"JS/views/process.js"
+			],
+			[
+				"jscl",
+				"JSON/CL_001.json"
+			],
+			[
+				"artile",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"viewsfull",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"indexlist",
+				"JS/views/index/list.js"
+			],
+			[
+				"manusript.js",
+				"JS/views/manuscript.js"
+			],
+			[
+				"manuriptmap",
+				"JS/manuscriptMap.js"
+			],
+			[
+				"manusript",
+				"JSON/manuscripts.json"
+			],
+			[
+				"viewsindex",
+				"JS/views/index/list.js"
+			],
+			[
+				"viewsfull.art",
+				"JS/views/manuscript.part/full.article.js"
+			],
+			[
+				"inde",
+				"JS/views/index/list.js"
+			],
+			[
+				"viewsbiog",
+				"JS/views/biographies.js"
+			],
+			[
+				"manuscrip.partfull",
+				"JS/views/manuscript.part/full.js"
+			],
+			[
+				"biogr",
+				"JS/collections/biography.js"
+			],
+			[
+				"jsonbio",
+				"json/biographies.json"
+			],
+			[
+				"manuscript.js",
+				"js/views/manuscript.js"
+			],
+			[
+				"manuscriptm",
+				"js/manuscriptMap.js"
+			],
+			[
+				"modelnote",
+				"js/models/note.js"
+			],
+			[
+				"cl_001",
+				"json/CL_001_src.json"
+			],
+			[
+				"jsoncl_00",
+				"json/CL_001_src.json"
+			],
+			[
+				"viewsnote",
+				"js/views/note/full.js"
+			],
+			[
+				"fullh",
+				"html/page/full.html"
+			],
+			[
+				"modelsnote",
+				"js/models/note.js"
+			],
+			[
+				"list",
+				"html/page/list.html"
+			],
+			[
+				"viewsuimen",
+				"js/views/ui/menu.js"
+			],
+			[
+				"modelma",
+				"js/bb-modelmanager.js"
+			],
+			[
+				"collection",
+				"js/collections/page.js"
+			],
+			[
+				"collect",
+				"js/collections/page.js"
+			],
+			[
+				"style",
+				"css/bb-style.styl"
+			],
+			[
+				"modelmana",
+				"js/bb-modelmanager.js"
+			],
+			[
+				"viewspage",
+				"js/views/page/full.js"
+			],
+			[
+				"pagestyl",
+				"css/bb-page.styl"
+			],
+			[
+				"",
+				"css/bb-style.styl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true
+}

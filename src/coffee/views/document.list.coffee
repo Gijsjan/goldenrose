@@ -27,9 +27,14 @@ define (require) ->
 
 			@collection = new Collections.Documents()
 			@collection.fetch
-				success: => @render()
+				success: => 
+					@collection.on 'add', @render, @
+					@render()
+
 
 		render: ->
+			@$el.html ''
+			
 			@collection.each (doc) =>
 				name = if doc.get('name')? then doc.get('name') else doc.id
 				@$el.append $("<li id='#{doc.id}' />").html(name)

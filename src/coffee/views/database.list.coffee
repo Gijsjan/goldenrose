@@ -27,9 +27,13 @@ define (require) ->
 
 			@collection = new Collections.Databases()
 			@collection.fetch
-				success: => @render()
+				success: => 
+					@collection.on 'add', @render, @
+					@render()
 
 		render: ->
+			@$el.html ''
+			
 			@collection.each (db) =>
 				@$el.append $("<li id='#{db.id}' />").html(db.id)
 
