@@ -3,11 +3,14 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require) {
-    var BaseView, Collections, DatabaseList, config, _ref;
+    var BaseView, Collections, DatabaseList, Templates, config, _ref;
     config = require('config');
     BaseView = require('views/base');
     Collections = {
       Databases: require('collections/databases')
+    };
+    Templates = {
+      DatabaseList: require('text!html/database.list.html')
     };
     return DatabaseList = (function(_super) {
       __extends(DatabaseList, _super);
@@ -16,10 +19,6 @@
         _ref = DatabaseList.__super__.constructor.apply(this, arguments);
         return _ref;
       }
-
-      DatabaseList.prototype.id = 'dbs';
-
-      DatabaseList.prototype.tagName = 'ul';
 
       DatabaseList.prototype.events = {
         'click li': 'selectDB'
@@ -45,10 +44,12 @@
       };
 
       DatabaseList.prototype.render = function() {
-        var _this = this;
-        this.$el.html('');
+        var rhtml,
+          _this = this;
+        rhtml = _.template(Templates.DatabaseList);
+        this.$el.html(rhtml);
         this.collection.each(function(db) {
-          return _this.$el.append($("<li id='" + db.id + "' />").html(db.id));
+          return _this.$('ul#databases').append($("<li id='" + db.id + "' />").html(db.id));
         });
         return this;
       };

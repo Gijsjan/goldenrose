@@ -27,16 +27,20 @@
       }
 
       vEdit.prototype.events = {
-        'click .add.collection': 'addCollection',
-        'click .add.document': 'addDocument',
-        'click .save.document': 'saveDocument'
+        'click #breadcrumb .database': 'selectDB'
+      };
+
+      vEdit.prototype.selectDB = function() {
+        this.databaseList.render().$el.fadeIn();
+        this.collectionList.$el.fadeOut();
+        return this.documentList.$el.fadeOut();
       };
 
       vEdit.prototype.addCollection = function() {
         var collName;
         collName = window.prompt("Enter collection name", "");
         if (collName != null) {
-          return this.collList.collection.create({
+          return this.collectionList.collection.create({
             name: collName
           }, {
             wait: true
@@ -57,7 +61,7 @@
       vEdit.prototype.saveDocument = function() {
         var data;
         data = JSON.parse(this.editor.getValue());
-        return this.docList.collection.create(data, {
+        return this.documentList.collection.create(data, {
           wait: true
         });
       };
@@ -74,17 +78,15 @@
         var rhtml;
         rhtml = _.template(Templates.Home);
         this.$el.html(rhtml);
-        this.dbList = new Views.DatabaseList();
-        this.$('#dbsdiv').html(this.dbList.$el);
-        this.editor = ace.edit(this.el.querySelector('#editor'));
-        this.editor.setTheme("ace/theme/textmate");
-        this.editor.getSession().setMode("ace/mode/json");
+        this.databaseList = new Views.DatabaseList();
+        this.$('#databaseList .cell').html(this.databaseList.$el);
         return this;
       };
 
       vEdit.prototype.showCollections = function() {
         var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
           _this = this;
+        this.databaseList.$el.fadeOut();
         breadcrumbOffset = this.$('#breadcrumb .database').offset();
         liOffset = this.$('#' + config.current.database.id).offset();
         this.$('#' + config.current.database.id).css({
@@ -99,24 +101,37 @@
           left: deltaLeft,
           top: deltaTop
         }, 500, function() {
-          _this.$('#breadcrumb .database').html(config.current.database.id);
-          return _this.dbList.remove();
+          return _this.$('#breadcrumb .database').html(config.current.database.id);
         });
-        this.$('#dbsdiv ~ div').addClass('hidden');
-        this.$('#dbshead ~ div').addClass('hidden');
-        this.collList = new Views.CollectionList();
-        this.$('#collsdiv').html(this.collList.$el);
-        this.$('#collshead').removeClass('hidden');
-        return this.$('#collsdiv').removeClass('hidden');
+        this.collectionList = new Views.CollectionList();
+        return this.$('#collectionList .cell').html(this.collectionList.$el);
       };
 
       vEdit.prototype.showDocuments = function() {
-        this.$('#collsdiv ~ div').addClass('hidden');
-        this.$('#collshead ~ div').addClass('hidden');
-        this.docList = new Views.DocumentList();
-        this.$('#docsdiv').html(this.docList.$el);
-        this.$('#docshead').removeClass('hidden');
-        return this.$('#docsdiv').removeClass('hidden');
+        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
+          _this = this;
+        breadcrumbOffset = this.$('#breadcrumb .collection').offset();
+        liOffset = this.$('#' + config.current.collection.id).offset();
+        this.$('#' + config.current.collection.id).css({
+          'left': '0px'
+        });
+        this.$('#' + config.current.collection.id).css({
+          'position': 'relative'
+        });
+        deltaTop = breadcrumbOffset.top - liOffset.top;
+        deltaLeft = breadcrumbOffset.left - liOffset.left;
+        this.$('#' + config.current.collection.id).animate({
+          left: deltaLeft,
+          top: deltaTop
+        }, 500, function() {
+          _this.$('#breadcrumb .collection').html(config.current.collection.id);
+          return _this.collectionList.$el.fadeOut();
+        });
+        this.documentList = new Views.DocumentList();
+        this.$('#documentList .list').html(this.documentList.$el);
+        this.editor = ace.edit(this.el.querySelector('#editor'));
+        this.editor.setTheme("ace/theme/textmate");
+        return this.editor.getSession().setMode("ace/mode/json");
       };
 
       vEdit.prototype.showDocument = function() {

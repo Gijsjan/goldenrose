@@ -4,6 +4,9 @@ define (require) ->
 	Collections =
 		Documents: require 'collections/documents'
 
+	Templates =
+		DocumentList: require 'text!html/document.list.html'
+
 	class DocumentList extends BaseView
 		
 		id: 'docs'
@@ -33,10 +36,11 @@ define (require) ->
 
 
 		render: ->
-			@$el.html ''
+			rhtml = _.template Templates.DocumentList
+			@$el.html rhtml
 			
 			@collection.each (doc) =>
 				name = if doc.get('name')? then doc.get('name') else doc.id
-				@$el.append $("<li id='#{doc.id}' />").html(name)
+				@$('ul#documents').append $("<li id='#{doc.id}' />").html(name)
 
 			@

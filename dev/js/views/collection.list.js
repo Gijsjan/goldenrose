@@ -3,11 +3,14 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require) {
-    var BaseView, CollectionList, Collections, config, _ref;
+    var BaseView, CollectionList, Collections, Templates, config, _ref;
     config = require('config');
     BaseView = require('views/base');
     Collections = {
       Collections: require('collections/collections')
+    };
+    Templates = {
+      CollectionList: require('text!html/collection.list.html')
     };
     return CollectionList = (function(_super) {
       __extends(CollectionList, _super);
@@ -16,10 +19,6 @@
         _ref = CollectionList.__super__.constructor.apply(this, arguments);
         return _ref;
       }
-
-      CollectionList.prototype.id = 'colls';
-
-      CollectionList.prototype.tagName = 'ul';
 
       CollectionList.prototype.events = {
         'click li': 'selectColl'
@@ -45,10 +44,12 @@
       };
 
       CollectionList.prototype.render = function() {
-        var _this = this;
-        this.$el.html('');
+        var rhtml,
+          _this = this;
+        rhtml = _.template(Templates.CollectionList);
+        this.$el.html(rhtml);
         return this.collection.each(function(coll) {
-          return _this.$el.append($("<li id='" + coll.id + "' />").html(coll.id));
+          return _this.$('ul#collections').append($("<li id='" + coll.id + "' />").html(coll.id));
         });
       };
 

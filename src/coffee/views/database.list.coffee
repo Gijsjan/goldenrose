@@ -4,11 +4,10 @@ define (require) ->
 	Collections =
 		Databases: require 'collections/databases'
 
+	Templates =
+		DatabaseList: require 'text!html/database.list.html'
+
 	class DatabaseList extends BaseView
-		
-		id: 'dbs'
-		
-		tagName: 'ul'
 
 		events:
 			'click li': 'selectDB'
@@ -32,9 +31,10 @@ define (require) ->
 					@render()
 
 		render: ->
-			@$el.html ''
+			rhtml = _.template Templates.DatabaseList
+			@$el.html rhtml
 			
 			@collection.each (db) =>
-				@$el.append $("<li id='#{db.id}' />").html(db.id)
+				@$('ul#databases').append $("<li id='#{db.id}' />").html(db.id)
 
 			@

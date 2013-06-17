@@ -4,11 +4,10 @@ define (require) ->
 	Collections =
 		Collections: require 'collections/collections'
 
+	Templates =
+		CollectionList: require 'text!html/collection.list.html'
+
 	class CollectionList extends BaseView
-		
-		id: 'colls'
-		
-		tagName: 'ul'
 
 		events:
 			'click li': 'selectColl'
@@ -32,7 +31,8 @@ define (require) ->
 					@collection.on 'add', @render, @
 
 		render: ->
-			@$el.html ''
+			rhtml = _.template Templates.CollectionList
+			@$el.html rhtml
 
 			@collection.each (coll) =>
-				@$el.append $("<li id='#{coll.id}' />").html(coll.id)
+				@$('ul#collections').append $("<li id='#{coll.id}' />").html(coll.id)

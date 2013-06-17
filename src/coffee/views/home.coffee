@@ -20,14 +20,21 @@ define (require) ->
 	class vEdit extends BaseView
 
 		events:
-			'click .add.collection': 'addCollection'
-			'click .add.document': 'addDocument'
-			'click .save.document': 'saveDocument'
+			'click #breadcrumb .database': 'selectDB'
+			# 'click .add.collection': 'addCollection'
+			# 'click .add.document': 'addDocument'
+			# 'click .save.document': 'saveDocument'
+
+		selectDB: ->
+			@databaseList.render().$el.fadeIn()
+			@collectionList.$el.fadeOut()
+			@documentList.$el.fadeOut()
+
 
 		addCollection: ->
 			collName = window.prompt "Enter collection name", ""
 			if collName?
-				@collList.collection.create
+				@collectionList.collection.create
 					name: collName
 				,
 					wait: true
@@ -44,7 +51,7 @@ define (require) ->
 		saveDocument: ->
 			data = JSON.parse @editor.getValue()
 
-			@docList.collection.create data, wait: true
+			@documentList.collection.create data, wait: true
 
 		initialize: ->
 			super
@@ -59,16 +66,14 @@ define (require) ->
 			rhtml = _.template Templates.Home
 			@$el.html rhtml
 
-			@dbList = new Views.DatabaseList()
-			@$('#dbsdiv').html @dbList.$el
-
-			@editor = ace.edit @el.querySelector('#editor')
-			@editor.setTheme "ace/theme/textmate"
-			@editor.getSession().setMode "ace/mode/json"
+			@databaseList = new Views.DatabaseList()
+			@$('#databaseList .cell').html @databaseList.$el
 
 			@
 
 		showCollections: ->
+			@databaseList.$el.fadeOut()
+
 			breadcrumbOffset = @$('#breadcrumb .database').offset()
 			liOffset = @$('#'+config.current.database.id).offset()
 
@@ -86,26 +91,49 @@ define (require) ->
 			,
 				=>
 					@$('#breadcrumb .database').html config.current.database.id
-					@dbList.remove()
+					
 
-			@$('#dbsdiv ~ div').addClass('hidden')
-			@$('#dbshead ~ div').addClass('hidden')
+			# @$('#dbsdiv ~ div').addClass('hidden')
+			# @$('#dbshead ~ div').addClass('hidden')
 
-			@collList = new Views.CollectionList()
-			@$('#collsdiv').html @collList.$el
+			@collectionList = new Views.CollectionList()
+			@$('#collectionList .cell').html @collectionList.$el
 
-			@$('#collshead').removeClass('hidden')
-			@$('#collsdiv').removeClass('hidden')
+			# @$('#collshead').removeClass('hidden')
+			# @$('#collsdiv').removeClass('hidden')
 
 		showDocuments: ->
-			@$('#collsdiv ~ div').addClass('hidden')
-			@$('#collshead ~ div').addClass('hidden')
+			breadcrumbOffset = @$('#breadcrumb .collection').offset()
+			liOffset = @$('#'+config.current.collection.id).offset()
 
-			@docList = new Views.DocumentList()
-			@$('#docsdiv').html @docList.$el
+			@$('#'+config.current.collection.id).css 'left': '0px'
+			@$('#'+config.current.collection.id).css 'position': 'relative'
 
-			@$('#docshead').removeClass('hidden')
-			@$('#docsdiv').removeClass('hidden')
+			deltaTop = breadcrumbOffset.top - liOffset.top
+			deltaLeft = breadcrumbOffset.left - liOffset.left
+			
+			@$('#'+config.current.collection.id).animate
+				left: deltaLeft
+				top: deltaTop
+			,
+				500
+			,
+				=>
+					@$('#breadcrumb .collection').html config.current.collection.id
+					@collectionList.$el.fadeOut()
+
+			# @$('#collsdiv ~ div').addClass('hidden')
+			# @$('#collshead ~ div').addClass('hidden')
+
+			@documentList = new Views.DocumentList()
+			@$('#documentList .list').html @documentList.$el
+
+			@editor = ace.edit @el.querySelector('#editor')
+			@editor.setTheme "ace/theme/textmate"
+			@editor.getSession().setMode "ace/mode/json"
+
+			# @$('#docshead').removeClass('hidden')
+			# @$('#docsdiv').removeClass('hidden')
 
 		showDocument: ->
 			attrs = $.extend {}, config.current.document.attributes # DeepCopy attributes

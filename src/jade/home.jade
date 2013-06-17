@@ -5,35 +5,49 @@
 				small MongoDB Viewer
 
 	#breadcrumb.row.span1
+		ul.cell.span1
+			li.database &nbsp;
+			li.collection &nbsp;
+
+	#databaseList.row.span1
 		.cell.span1
-			.database &nbsp;
-			.collection &nbsp;
-			.document &nbsp;
 
-	#heads.row.span12
-		#dbshead.cell.span1 
-			span DBs
-	
-		#collshead.cell.span2.hidden
-			span Collections
-			span.add.collection +
-	
-		#docshead.cell.span2.hidden
-			span Docs
-			span.add.document +
-	
-		#editorhead.cell.span5.hidden
-			span JSON
-			span.save.document v
+	#collectionList.row.span1
+		.cell.span1
 
-	#body.row.span12
-		#dbsdiv.cell.span1
-	
-		#collsdiv.cell.span2.hidden
-			ul#colls
-	
-		#docsdiv.cell.span2.hidden
-			ul#docs
-	
-		#editordiv.cell.span5.hidden
+	#documentList.row.span5
+		.cell.span1.list
+		.cell.span4
+			h2 JSON
 			#editor
+			
+
+
+
+	//- #heads.row.span12
+	//- 	#dbshead.cell.span1 
+	//- 		span DBs
+	
+	//- 	#collshead.cell.span2.hidden
+	//- 		span Collections
+	//- 		span.add.collection +
+	
+	//- 	#docshead.cell.span2.hidden
+	//- 		span Docs
+	//- 		span.add.document +
+	
+	//- 	#editorhead.cell.span5.hidden
+	//- 		span JSON
+	//- 		span.save.document v
+
+	//- #body.row.span12
+	//- 	#dbsdiv.cell.span1
+	
+	//- 	#collsdiv.cell.span2.hidden
+	//- 		ul#colls
+	
+	//- 	#docsdiv.cell.span2.hidden
+	//- 		ul#docs
+	
+	//- 	#editordiv.cell.span5.hidden
+	//- 		#editor
