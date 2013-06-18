@@ -84,30 +84,24 @@
       };
 
       vEdit.prototype.showCollections = function() {
-        var $li, breadcrumbOffset, liOffset,
+        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
           _this = this;
         this.databaseList.$el.fadeOut();
         breadcrumbOffset = this.$('#breadcrumb .database').offset();
         liOffset = this.$('#' + config.current.database.id).offset();
-        $li = $("<li>" + config.current.database.id + "</li>");
-        $li.css({
-          'left': liOffset.left + 'px'
+        this.$('#' + config.current.database.id).css({
+          'left': '0px'
         });
-        $li.css({
-          'top': liOffset.top + 'px'
+        this.$('#' + config.current.database.id).css({
+          'position': 'relative'
         });
-        $li.css({
-          'position': 'absolute'
-        });
-        $li.css({
-          'z-index': '1000'
-        });
-        $('body').append($li);
-        return $li.animate({
-          left: breadcrumbOffset.left,
-          top: breadcrumbOffset.top
+        deltaTop = breadcrumbOffset.top - liOffset.top;
+        deltaLeft = breadcrumbOffset.left - liOffset.left;
+        return this.$('#' + config.current.database.id).animate({
+          left: deltaLeft,
+          top: deltaTop
         }, 500, function() {
-          _this.$('#breadcrumb li.database').html($li);
+          _this.$('#breadcrumb li.database').html(config.current.database.id);
           _this.collectionList = new Views.CollectionList();
           return _this.$('#main aside').html(_this.collectionList.$el);
         });
@@ -134,7 +128,6 @@
           _this.$('#breadcrumb li.collection').html(config.current.collection.id);
           _this.documentList = new Views.DocumentList();
           _this.$('#main aside').append(_this.documentList.$el);
-          console.log(_this.el.querySelector('#editor'));
           _this.editor = ace.edit(_this.el.querySelector('#editor'));
           _this.editor.setTheme("ace/theme/textmate");
           return _this.editor.getSession().setMode("ace/mode/json");

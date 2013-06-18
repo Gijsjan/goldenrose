@@ -73,27 +73,34 @@ define (require) ->
 
 		showCollections: ->
 			@databaseList.$el.fadeOut()
-			
+		
 			breadcrumbOffset = @$('#breadcrumb .database').offset()
 			liOffset = @$('#'+config.current.database.id).offset()
 
-			$li = $ "<li>#{config.current.database.id}</li>"
-			# TODO: Use class
-			$li.css 'left': liOffset.left+'px'
-			$li.css 'top': liOffset.top+'px'
-			$li.css 'position': 'absolute'
-			$li.css 'z-index': '1000'
+			# $li = $ "<li>#{config.current.database.id}</li>"
+			# # TODO: Use class
+			# $li.css 'left': liOffset.left+'px'
+			# $li.css 'top': liOffset.top+'px'
+			# $li.css 'position': 'absolute'
+			# $li.css 'z-index': '1000'
+			# $li.css 'color': 'white'
 
-			$('body').append $li
+			# $('body').append $li
+
+			@$('#'+config.current.database.id).css 'left': '0px'
+			@$('#'+config.current.database.id).css 'position': 'relative'
+
+			deltaTop = breadcrumbOffset.top - liOffset.top
+			deltaLeft = breadcrumbOffset.left - liOffset.left
 			
-			$li.animate
-				left: breadcrumbOffset.left
-				top: breadcrumbOffset.top
+			@$('#'+config.current.database.id).animate
+				left: deltaLeft
+				top: deltaTop
 			,
 				500
 			,
 				=>
-					@$('#breadcrumb li.database').html $li # Change class
+					@$('#breadcrumb li.database').html config.current.database.id
 
 					@collectionList = new Views.CollectionList()
 					@$('#main aside').html @collectionList.$el
@@ -126,7 +133,6 @@ define (require) ->
 					@documentList = new Views.DocumentList()
 					@$('#main aside').append @documentList.$el
 
-					console.log @el.querySelector('#editor')
 					@editor = ace.edit @el.querySelector('#editor')
 					@editor.setTheme "ace/theme/textmate"
 					@editor.getSession().setMode "ace/mode/json"
