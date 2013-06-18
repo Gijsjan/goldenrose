@@ -9,9 +9,7 @@ define (require) ->
 
 	class DocumentList extends BaseView
 		
-		id: 'docs'
-		
-		tagName: 'ul'
+		id: 'documentlist'
 
 		events:
 			'click li': 'selectDoc'

@@ -67,42 +67,40 @@ define (require) ->
 			@$el.html rhtml
 
 			@databaseList = new Views.DatabaseList()
-			@$('#databaseList .cell').html @databaseList.$el
+			@$('#main aside').html @databaseList.$el
 
 			@
 
 		showCollections: ->
 			@databaseList.$el.fadeOut()
-
+			
 			breadcrumbOffset = @$('#breadcrumb .database').offset()
 			liOffset = @$('#'+config.current.database.id).offset()
 
-			@$('#'+config.current.database.id).css 'left': '0px'
-			@$('#'+config.current.database.id).css 'position': 'relative'
+			$li = $ "<li>#{config.current.database.id}</li>"
+			# TODO: Use class
+			$li.css 'left': liOffset.left+'px'
+			$li.css 'top': liOffset.top+'px'
+			$li.css 'position': 'absolute'
+			$li.css 'z-index': '1000'
 
-			deltaTop = breadcrumbOffset.top - liOffset.top
-			deltaLeft = breadcrumbOffset.left - liOffset.left
+			$('body').append $li
 			
-			@$('#'+config.current.database.id).animate
-				left: deltaLeft
-				top: deltaTop
+			$li.animate
+				left: breadcrumbOffset.left
+				top: breadcrumbOffset.top
 			,
 				500
 			,
 				=>
-					@$('#breadcrumb .database').html config.current.database.id
-					
+					@$('#breadcrumb li.database').html $li # Change class
 
-			# @$('#dbsdiv ~ div').addClass('hidden')
-			# @$('#dbshead ~ div').addClass('hidden')
-
-			@collectionList = new Views.CollectionList()
-			@$('#collectionList .cell').html @collectionList.$el
-
-			# @$('#collshead').removeClass('hidden')
-			# @$('#collsdiv').removeClass('hidden')
+					@collectionList = new Views.CollectionList()
+					@$('#main aside').html @collectionList.$el
 
 		showDocuments: ->
+			@collectionList.$el.fadeOut()
+
 			breadcrumbOffset = @$('#breadcrumb .collection').offset()
 			liOffset = @$('#'+config.current.collection.id).offset()
 
@@ -119,18 +117,19 @@ define (require) ->
 				500
 			,
 				=>
-					@$('#breadcrumb .collection').html config.current.collection.id
-					@collectionList.$el.fadeOut()
+					@$('#breadcrumb li.collection').html config.current.collection.id
+					
 
 			# @$('#collsdiv ~ div').addClass('hidden')
 			# @$('#collshead ~ div').addClass('hidden')
 
-			@documentList = new Views.DocumentList()
-			@$('#documentList .list').html @documentList.$el
+					@documentList = new Views.DocumentList()
+					@$('#main aside').append @documentList.$el
 
-			@editor = ace.edit @el.querySelector('#editor')
-			@editor.setTheme "ace/theme/textmate"
-			@editor.getSession().setMode "ace/mode/json"
+					console.log @el.querySelector('#editor')
+					@editor = ace.edit @el.querySelector('#editor')
+					@editor.setTheme "ace/theme/textmate"
+					@editor.getSession().setMode "ace/mode/json"
 
 			# @$('#docshead').removeClass('hidden')
 			# @$('#docsdiv').removeClass('hidden')

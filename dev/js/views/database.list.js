@@ -20,6 +20,8 @@
         return _ref;
       }
 
+      DatabaseList.prototype.id = 'databaselist';
+
       DatabaseList.prototype.events = {
         'click li': 'selectDB'
       };

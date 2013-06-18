@@ -20,6 +20,8 @@
         return _ref;
       }
 
+      CollectionList.prototype.id = 'collectionlist';
+
       CollectionList.prototype.events = {
         'click li': 'selectColl'
       };

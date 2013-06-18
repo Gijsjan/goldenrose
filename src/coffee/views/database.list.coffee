@@ -9,6 +9,8 @@ define (require) ->
 
 	class DatabaseList extends BaseView
 
+		id: 'databaselist'
+
 		events:
 			'click li': 'selectDB'
 

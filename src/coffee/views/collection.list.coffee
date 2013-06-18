@@ -9,6 +9,8 @@ define (require) ->
 
 	class CollectionList extends BaseView
 
+		id: 'collectionlist'
+
 		events:
 			'click li': 'selectColl'
 

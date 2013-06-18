@@ -20,9 +20,7 @@
         return _ref;
       }
 
-      DocumentList.prototype.id = 'docs';
-
-      DocumentList.prototype.tagName = 'ul';
+      DocumentList.prototype.id = 'documentlist';
 
       DocumentList.prototype.events = {
         'click li': 'selectDoc'
