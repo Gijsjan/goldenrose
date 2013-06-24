@@ -20,7 +20,7 @@ define (require) ->
 			
 			config.current.database = @collection.get ev.currentTarget.id
 
-			@publish 'DatabaseList:selected'
+			@publish 'database:selected'
 
 		
 		initialize: ->

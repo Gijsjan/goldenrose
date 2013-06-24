@@ -20,7 +20,7 @@ define (require) ->
 			
 			config.current.collection = @collection.get ev.currentTarget.id
 
-			@publish 'CollectionList:selected'
+			@publish 'collection:selected'
 
 		
 		initialize: ->

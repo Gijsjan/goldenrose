@@ -13,6 +13,7 @@ define (require) ->
 		Home: require 'text!html/home.html'
 
 	Views =
+		Breadcrumb: require 'views/breadcrumb'
 		DatabaseList: require 'views/database.list'
 		CollectionList: require 'views/collection.list'
 		DocumentList: require 'views/document.list'
@@ -21,9 +22,6 @@ define (require) ->
 
 		events:
 			'click #breadcrumb .database': 'selectDB'
-			# 'click .add.collection': 'addCollection'
-			# 'click .add.document': 'addDocument'
-			# 'click .save.document': 'saveDocument'
 
 		selectDB: ->
 			@databaseList.render().$el.fadeIn()
@@ -45,9 +43,6 @@ define (require) ->
 
 			@editor.setValue JSON.stringify(data, null, 4), -1
 
-			$('#editorhead').removeClass 'hidden'
-			$('#editordiv').removeClass 'hidden'
-
 		saveDocument: ->
 			data = JSON.parse @editor.getValue()
 
@@ -56,89 +51,47 @@ define (require) ->
 		initialize: ->
 			super
 
-			@subscribe 'DatabaseList:selected', @showCollections
-			@subscribe 'CollectionList:selected', @showDocuments
-			@subscribe 'DocumentList:selected', @showDocument
+			@subscribe 'database:selected', @showCollections
+			@subscribe 'collection:selected', @showDocuments
+			@subscribe 'document:selected', @showDocument
 
+			@breadcrumb = new Views.Breadcrumb()
+			@breadcrumb.on 'showDatabases', => @showDatabases()
+			@breadcrumb.on 'showCollections', => @showCollections()
 			@render()
 
 		render: ->
 			rhtml = _.template Templates.Home
 			@$el.html rhtml
 
-			@databaseList = new Views.DatabaseList()
-			@$('#main aside').html @databaseList.$el
+			@$('#main').prepend @breadcrumb.$el
+
+			@showDatabases()
 
 			@
 
+		showDatabases: ->
+			@databaseList = new Views.DatabaseList()
+			@$('#main aside').html @databaseList.$el
+
 		showCollections: ->
 			@databaseList.$el.fadeOut()
-		
-			breadcrumbOffset = @$('#breadcrumb .database').offset()
-			liOffset = @$('#'+config.current.database.id).offset()
 
-			# $li = $ "<li>#{config.current.database.id}</li>"
-			# # TODO: Use class
-			# $li.css 'left': liOffset.left+'px'
-			# $li.css 'top': liOffset.top+'px'
-			# $li.css 'position': 'absolute'
-			# $li.css 'z-index': '1000'
-			# $li.css 'color': 'white'
-
-			# $('body').append $li
-
-			@$('#'+config.current.database.id).css 'left': '0px'
-			@$('#'+config.current.database.id).css 'position': 'relative'
-
-			deltaTop = breadcrumbOffset.top - liOffset.top
-			deltaLeft = breadcrumbOffset.left - liOffset.left
-			
-			@$('#'+config.current.database.id).animate
-				left: deltaLeft
-				top: deltaTop
-			,
-				500
-			,
-				=>
-					@$('#breadcrumb li.database').html config.current.database.id
-
-					@collectionList = new Views.CollectionList()
-					@$('#main aside').html @collectionList.$el
+			@animate 'database', =>
+				@collectionList = new Views.CollectionList()
+				@$('#main aside').html @collectionList.$el
 
 		showDocuments: ->
 			@collectionList.$el.fadeOut()
 
-			breadcrumbOffset = @$('#breadcrumb .collection').offset()
-			liOffset = @$('#'+config.current.collection.id).offset()
+			@animate 'collection', =>
+				@documentList = new Views.DocumentList()
+				@$('#main aside').append @documentList.$el
 
-			@$('#'+config.current.collection.id).css 'left': '0px'
-			@$('#'+config.current.collection.id).css 'position': 'relative'
-
-			deltaTop = breadcrumbOffset.top - liOffset.top
-			deltaLeft = breadcrumbOffset.left - liOffset.left
-			
-			@$('#'+config.current.collection.id).animate
-				left: deltaLeft
-				top: deltaTop
-			,
-				500
-			,
-				=>
-					@$('#breadcrumb li.collection').html config.current.collection.id
-					
-
-			# @$('#collsdiv ~ div').addClass('hidden')
-			# @$('#collshead ~ div').addClass('hidden')
-
-					@documentList = new Views.DocumentList()
-					@$('#main aside').append @documentList.$el
-
-					@editor = ace.edit @el.querySelector('#editor')
-					@editor.setTheme "ace/theme/textmate"
-					@editor.getSession().setMode "ace/mode/json"
-
-			# @$('#docshead').removeClass('hidden')
-			# @$('#docsdiv').removeClass('hidden')
+				@editor = ace.edit @el.querySelector('#editor')
+				@editor.setTheme "ace/theme/textmate"
+				@editor.getSession().setMode "ace/mode/json"
+				@$('#editor').height @$('.panel').height()
 
 		showDocument: ->
 			attrs = $.extend {}, config.current.document.attributes # DeepCopy attributes
@@ -146,5 +99,23 @@ define (require) ->
 
 			@editor.setValue(JSON.stringify(attrs, null, 4), -1);
 
-			$('#editorhead').removeClass('hidden');
-			$('#editordiv').removeClass('hidden');
+		animate: (type, cb) ->
+			breadcrumbOffset = @$('#breadcrumb .'+type).offset()
+			liOffset = @$('#'+config.current[type].id).offset()
+
+			@$('#'+config.current[type].id).css 'left': '0px'
+			@$('#'+config.current[type].id).css 'position': 'relative'
+
+			deltaTop = breadcrumbOffset.top - liOffset.top
+			deltaLeft = breadcrumbOffset.left - liOffset.left
+			
+			@$('#'+config.current[type].id).animate
+				left: deltaLeft
+				top: deltaTop
+			,
+				500
+			,
+				=>
+					@$('#breadcrumb li.'+type).html config.current[type].id
+
+					cb()

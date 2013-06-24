@@ -30,7 +30,7 @@
         this.$('.active').removeClass('active');
         $(ev.currentTarget).addClass('active');
         config.current.collection = this.collection.get(ev.currentTarget.id);
-        return this.publish('CollectionList:selected');
+        return this.publish('collection:selected');
       };
 
       CollectionList.prototype.initialize = function() {

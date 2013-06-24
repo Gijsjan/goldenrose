@@ -30,7 +30,7 @@
         this.$('.active').removeClass('active');
         $(ev.currentTarget).addClass('active');
         config.current.document = this.collection.get(ev.currentTarget.id);
-        return this.publish('DocumentList:selected');
+        return this.publish('document:selected');
       };
 
       DocumentList.prototype.initialize = function() {

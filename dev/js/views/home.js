@@ -14,6 +14,7 @@
       Home: require('text!html/home.html')
     };
     Views = {
+      Breadcrumb: require('views/breadcrumb'),
       DatabaseList: require('views/database.list'),
       CollectionList: require('views/collection.list'),
       DocumentList: require('views/document.list')
@@ -53,9 +54,7 @@
         data = {
           "": ""
         };
-        this.editor.setValue(JSON.stringify(data, null, 4), -1);
-        $('#editorhead').removeClass('hidden');
-        return $('#editordiv').removeClass('hidden');
+        return this.editor.setValue(JSON.stringify(data, null, 4), -1);
       };
 
       vEdit.prototype.saveDocument = function() {
@@ -67,10 +66,18 @@
       };
 
       vEdit.prototype.initialize = function() {
+        var _this = this;
         vEdit.__super__.initialize.apply(this, arguments);
-        this.subscribe('DatabaseList:selected', this.showCollections);
-        this.subscribe('CollectionList:selected', this.showDocuments);
-        this.subscribe('DocumentList:selected', this.showDocument);
+        this.subscribe('database:selected', this.showCollections);
+        this.subscribe('collection:selected', this.showDocuments);
+        this.subscribe('document:selected', this.showDocument);
+        this.breadcrumb = new Views.Breadcrumb();
+        this.breadcrumb.on('showDatabases', function() {
+          return _this.showDatabases();
+        });
+        this.breadcrumb.on('showCollections', function() {
+          return _this.showCollections();
+        });
         return this.render();
       };
 
@@ -78,59 +85,35 @@
         var rhtml;
         rhtml = _.template(Templates.Home);
         this.$el.html(rhtml);
-        this.databaseList = new Views.DatabaseList();
-        this.$('#main aside').html(this.databaseList.$el);
+        this.$('#main').prepend(this.breadcrumb.$el);
+        this.showDatabases();
         return this;
       };
 
+      vEdit.prototype.showDatabases = function() {
+        this.databaseList = new Views.DatabaseList();
+        return this.$('#main aside').html(this.databaseList.$el);
+      };
+
       vEdit.prototype.showCollections = function() {
-        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
-          _this = this;
+        var _this = this;
         this.databaseList.$el.fadeOut();
-        breadcrumbOffset = this.$('#breadcrumb .database').offset();
-        liOffset = this.$('#' + config.current.database.id).offset();
-        this.$('#' + config.current.database.id).css({
-          'left': '0px'
-        });
-        this.$('#' + config.current.database.id).css({
-          'position': 'relative'
-        });
-        deltaTop = breadcrumbOffset.top - liOffset.top;
-        deltaLeft = breadcrumbOffset.left - liOffset.left;
-        return this.$('#' + config.current.database.id).animate({
-          left: deltaLeft,
-          top: deltaTop
-        }, 500, function() {
-          _this.$('#breadcrumb li.database').html(config.current.database.id);
+        return this.animate('database', function() {
           _this.collectionList = new Views.CollectionList();
           return _this.$('#main aside').html(_this.collectionList.$el);
         });
       };
 
       vEdit.prototype.showDocuments = function() {
-        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
-          _this = this;
+        var _this = this;
         this.collectionList.$el.fadeOut();
-        breadcrumbOffset = this.$('#breadcrumb .collection').offset();
-        liOffset = this.$('#' + config.current.collection.id).offset();
-        this.$('#' + config.current.collection.id).css({
-          'left': '0px'
-        });
-        this.$('#' + config.current.collection.id).css({
-          'position': 'relative'
-        });
-        deltaTop = breadcrumbOffset.top - liOffset.top;
-        deltaLeft = breadcrumbOffset.left - liOffset.left;
-        return this.$('#' + config.current.collection.id).animate({
-          left: deltaLeft,
-          top: deltaTop
-        }, 500, function() {
-          _this.$('#breadcrumb li.collection').html(config.current.collection.id);
+        return this.animate('collection', function() {
           _this.documentList = new Views.DocumentList();
           _this.$('#main aside').append(_this.documentList.$el);
           _this.editor = ace.edit(_this.el.querySelector('#editor'));
           _this.editor.setTheme("ace/theme/textmate");
-          return _this.editor.getSession().setMode("ace/mode/json");
+          _this.editor.getSession().setMode("ace/mode/json");
+          return _this.$('#editor').height(_this.$('.panel').height());
         });
       };
 
@@ -138,9 +121,29 @@
         var attrs;
         attrs = $.extend({}, config.current.document.attributes);
         delete attrs.id;
-        this.editor.setValue(JSON.stringify(attrs, null, 4), -1);
-        $('#editorhead').removeClass('hidden');
-        return $('#editordiv').removeClass('hidden');
+        return this.editor.setValue(JSON.stringify(attrs, null, 4), -1);
+      };
+
+      vEdit.prototype.animate = function(type, cb) {
+        var breadcrumbOffset, deltaLeft, deltaTop, liOffset,
+          _this = this;
+        breadcrumbOffset = this.$('#breadcrumb .' + type).offset();
+        liOffset = this.$('#' + config.current[type].id).offset();
+        this.$('#' + config.current[type].id).css({
+          'left': '0px'
+        });
+        this.$('#' + config.current[type].id).css({
+          'position': 'relative'
+        });
+        deltaTop = breadcrumbOffset.top - liOffset.top;
+        deltaLeft = breadcrumbOffset.left - liOffset.left;
+        return this.$('#' + config.current[type].id).animate({
+          left: deltaLeft,
+          top: deltaTop
+        }, 500, function() {
+          _this.$('#breadcrumb li.' + type).html(config.current[type].id);
+          return cb();
+        });
       };
 
       return vEdit;

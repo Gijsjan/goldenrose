@@ -30,7 +30,7 @@
         this.$('.active').removeClass('active');
         $(ev.currentTarget).addClass('active');
         config.current.database = this.collection.get(ev.currentTarget.id);
-        return this.publish('DatabaseList:selected');
+        return this.publish('database:selected');
       };
 
       DatabaseList.prototype.initialize = function() {
